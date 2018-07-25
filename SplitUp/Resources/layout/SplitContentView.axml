@@ -51,16 +51,12 @@
         android:textSize="10sp"
         android:id="@+id/friendText"
         android:layout_below="@id/amountText" />
-    <ScrollView
+    <ListView
+        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/friendText">
-        <ListView
-            android:textColor="@android:color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="10sp"
-            android:id="@+id/friendList"
-            android:smoothScrollbar="true" />
-    </ScrollView>
+        android:textSize="10sp"
+        android:id="@+id/friendList"
+        android:smoothScrollbar="true"
+        android:layout_below="@id/friendText" />
 </RelativeLayout>

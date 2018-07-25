@@ -59,7 +59,7 @@ namespace SplitUp.Adapter
             //fill in your items
             //holder.Title.Text = "new text here";
             amountTextView = (EditText) view.FindViewById(Resource.Id.amount);
-            ListView listView = (ListView) view.FindViewById(Resource.Id.friendList);
+            listView = (ListView) view.FindViewById(Resource.Id.friendList);
             if (data == null)
             {
                 amountTextView.Text = "0";
@@ -67,7 +67,7 @@ namespace SplitUp.Adapter
             else
             {
                 amountTextView.Text = data[position].GetAmount().ToString();
-                adapter = new FriendCheckViewAdapter(listView.Context, data[position].GetParticipants());
+                adapter = new FriendCheckViewAdapter(context, data[position].GetParticipants());
                 listView.Adapter = adapter;
             }
 

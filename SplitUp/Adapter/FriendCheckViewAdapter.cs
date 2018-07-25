@@ -11,6 +11,9 @@ namespace SplitUp.Adapter
     {
         private Context context;
         private List<Participant> participants;
+        private TextView friendNameTextView;
+        private CheckBox participateCheckBox;
+        private CheckBox payCheckBox;
 
         public FriendCheckViewAdapter(Context context, List<Participant> participants)
         {
@@ -53,13 +56,13 @@ namespace SplitUp.Adapter
                 view.Tag = holder;
             }
 
-            TextView friendNameTextView = (TextView) view.FindViewById(Resource.Id.friendName);
+            friendNameTextView = (TextView) view.FindViewById(Resource.Id.friendName);
             friendNameTextView.Text = participants[position].GetName();
 
-            CheckBox participateCheckBox = (CheckBox) view.FindViewById(Resource.Id.participateCheckBox);
+            participateCheckBox = (CheckBox) view.FindViewById(Resource.Id.participateCheckBox);
             participateCheckBox.Checked = participants[position].GetIsParticipate();
 
-            CheckBox payCheckBox = (CheckBox) view.FindViewById(Resource.Id.payCheckBox);
+            payCheckBox = (CheckBox) view.FindViewById(Resource.Id.payCheckBox);
             payCheckBox.Checked = participants[position].GetIsPay();
 
             return view;
