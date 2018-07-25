@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:id="@+id/relativeLayout1">
+    <TextView
+        android:text="모임 이름"
+        android:textColor="@android:color/black"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:id="@+id/meetingNameText" />
+    <TextView
+        android:text="TEST"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_toRightOf="@id/meetingNameText"
+        android:id="@+id/meetingName" />
+    <TextView
+        android:text="금액"
+        android:textColor="@android:color/black"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:id="@+id/amountText"
+        android:layout_below="@id/meetingNameText" />
+    <EditText
+        android:text=""
+        android:inputType="numberDecimal"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:gravity="top"
+        android:id="@+id/amount"
+        android:layout_toRightOf="@id/amountText"
+        android:layout_below="@id/meetingName" />
+    <TextView
+        android:text="참석자"
+        android:textColor="@android:color/black"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:id="@+id/friendText"
+        android:layout_below="@id/amountText" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/friendText">
+        <ListView
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:id="@+id/friendList"
+            android:smoothScrollbar="true" />
+    </ScrollView>
+</RelativeLayout>

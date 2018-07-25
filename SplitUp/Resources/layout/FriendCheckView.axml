@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50px">
+        <TextView
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="10sp"
+            android:layout_weight=".40"
+            android:id="@+id/empty" />
+        <TextView
+            android:text="참석"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="10sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="48px"
+            android:layout_weight=".30"
+            android:id="@+id/attendText" />
+        <TextView
+            android:text="결제"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="10sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="48px"
+            android:layout_weight=".30"
+            android:id="@+id/payText" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70px">
+        <TextView
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="10sp"
+            android:layout_weight=".40"
+            android:textAlignment="center"
+            android:id="@+id/friendName" />
+        <CheckBox
+            android:layout_width="0dp"
+            android:buttonTint="@android:color/black"
+            android:textColor="@android:color/black"
+            android:background="@android:color/white"
+            android:layout_height="match_parent"
+            android:textSize="10sp"
+            android:layout_weight=".30"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:id="@+id/participateCheckBox" />
+        <CheckBox
+            android:layout_width="0dp"
+            android:buttonTint="@android:color/black"
+            android:textColor="@android:color/black"
+            android:background="@android:color/white"
+            android:layout_height="match_parent"
+            android:textSize="10sp"
+            android:layout_weight=".30"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:id="@+id/payCheckBox" />
+    </LinearLayout>
+</LinearLayout>
