@@ -2414,11 +2414,11 @@ namespace SplitUp
 			// aapt resource value: 0x7f080038
 			public const int always = 2131230776;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int amount = 2131230903;
+			// aapt resource value: 0x7f0800b9
+			public const int amount = 2131230905;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int amountText = 2131230902;
+			// aapt resource value: 0x7f0800b8
+			public const int amountText = 2131230904;
 			
 			// aapt resource value: 0x7f080056
 			public const int async = 2131230806;
@@ -2549,14 +2549,14 @@ namespace SplitUp
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int friendList = 2131230905;
+			// aapt resource value: 0x7f0800be
+			public const int friendList = 2131230910;
 			
 			// aapt resource value: 0x7f08009d
 			public const int friendName = 2131230877;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int friendText = 2131230904;
+			// aapt resource value: 0x7f0800bd
+			public const int friendText = 2131230909;
 			
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
@@ -2607,22 +2607,28 @@ namespace SplitUp
 			public const int list_item = 2131230817;
 			
 			// aapt resource value: 0x7f08008b
-			public const int mainSplitResultListView = 2131230859;
+			public const int mainFragment = 2131230859;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int masked = 2131230908;
+			// aapt resource value: 0x7f0800c1
+			public const int masked = 2131230913;
 			
 			// aapt resource value: 0x7f0800a6
 			public const int media_actions = 2131230886;
 			
 			// aapt resource value: 0x7f0800b5
-			public const int meetingName = 2131230901;
+			public const int meeting = 2131230901;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int meetingName = 2131230908;
+			
+			// aapt resource value: 0x7f0800bb
+			public const int meetingNameText = 2131230907;
 			
 			// aapt resource value: 0x7f0800b4
-			public const int meetingNameText = 2131230900;
+			public const int meetingText = 2131230900;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int message = 2131230906;
+			// aapt resource value: 0x7f0800bf
+			public const int message = 2131230911;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2783,6 +2789,9 @@ namespace SplitUp
 			// aapt resource value: 0x7f080064
 			public const int spacer = 2131230820;
 			
+			// aapt resource value: 0x7f0800ba
+			public const int splitList = 2131230906;
+			
 			// aapt resource value: 0x7f080008
 			public const int split_action_bar = 2131230728;
 			
@@ -2852,6 +2861,12 @@ namespace SplitUp
 			// aapt resource value: 0x7f08006e
 			public const int topPanel = 2131230830;
 			
+			// aapt resource value: 0x7f0800b7
+			public const int totalParticipate = 2131230903;
+			
+			// aapt resource value: 0x7f0800b6
+			public const int totalParticipateText = 2131230902;
+			
 			// aapt resource value: 0x7f080090
 			public const int touch_outside = 2131230864;
 			
@@ -2882,8 +2897,8 @@ namespace SplitUp
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int visible = 2131230907;
+			// aapt resource value: 0x7f0800c0
+			public const int visible = 2131230912;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3128,16 +3143,19 @@ namespace SplitUp
 			public const int select_dialog_singlechoice_material = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int SplitContentView = 2130968636;
+			public const int split_fragment = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int SplitItem = 2130968637;
+			public const int split_list_fragment = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int support_simple_spinner_dropdown_item = 2130968638;
+			public const int SplitContentView = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int tooltip = 2130968639;
+			public const int support_simple_spinner_dropdown_item = 2130968639;
+			
+			// aapt resource value: 0x7f040040
+			public const int tooltip = 2130968640;
 			
 			static Layout()
 			{

@@ -15,7 +15,7 @@ namespace SplitUp.Adapter
         private CheckBox participateCheckBox;
         private CheckBox payCheckBox;
 
-        public FriendCheckViewAdapter(Context context, List<Participant> participants)
+        public FriendCheckViewAdapter(Context context, List<Participant> participants) : base()
         {
             this.context = context;
             this.participants = participants == null ? new List<Participant>() : participants;

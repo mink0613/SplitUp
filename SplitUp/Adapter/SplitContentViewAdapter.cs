@@ -60,16 +60,10 @@ namespace SplitUp.Adapter
             //holder.Title.Text = "new text here";
             amountTextView = (EditText) view.FindViewById(Resource.Id.amount);
             listView = (ListView) view.FindViewById(Resource.Id.friendList);
-            if (data == null)
-            {
-                amountTextView.Text = "0";
-            }
-            else
-            {
-                amountTextView.Text = data[position].GetAmount().ToString();
-                adapter = new FriendCheckViewAdapter(context, data[position].GetParticipants());
-                listView.Adapter = adapter;
-            }
+
+            amountTextView.Text = data[position].GetAmount().ToString();
+            adapter = new FriendCheckViewAdapter(view.Context, data[position].GetParticipants());
+            listView.Adapter = adapter;
 
             return view;
         }

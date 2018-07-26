@@ -1,20 +1,17 @@
 ﻿using Android.App;
-using Android.Widget;
 using Android.OS;
 using Android.Support.V7.App;
-using Android.Views;
-using SplitUp.Adapter;
-using System.Collections.Generic;
 using SplitUp.DataStructs;
+using SplitUp.fragment;
 using System;
+using System.Collections.Generic;
 
 namespace SplitUp
 {
+    //[Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat", MainLauncher = true)]
     [Activity(Label = "@string/app_name", Theme = "@android:style/Theme.NoTitleBar", MainLauncher = true)]
     public class MainActivity : Activity
     {
-        private ListView listView;
-        private SplitContentViewAdapter adapter;
         private List<SplitData> data;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -23,12 +20,15 @@ namespace SplitUp
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-            
-            listView = (ListView) FindViewById(Resource.Id.mainSplitResultListView);
-            data = GenerateSampleData();
 
-            adapter = new SplitContentViewAdapter(this, data);
-            listView.Adapter = adapter;
+            data = GenerateSampleData();
+            MeetingData meeting = new MeetingData("Test", data.Count, 100, data);
+
+            SplitListFragment fragment = (SplitListFragment)FragmentManager.FindFragmentById(Resource.Layout.split_list_fragment);
+            fragment.AddItem("Test", data.Count, 100, data);
+
+            //listView = (ListView) FindViewById(Resource.Id.mainSplitResultListView);
+            
         }
 
         private List<SplitData> GenerateSampleData()
