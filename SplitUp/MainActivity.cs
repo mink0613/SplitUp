@@ -26,9 +26,11 @@ namespace SplitUp
 
             SplitListFragment fragment = (SplitListFragment) FragmentManager.FindFragmentById(Resource.Id.frag_content);
             fragment.AddItem("Test", data.Count, 100, data);
+            fragment.AddItem("Test2", data.Count, 200, data);
+            fragment.AddItem("Test3", data.Count, 300, data);
 
             //listView = (ListView) FindViewById(Resource.Id.mainSplitResultListView);
-            
+
         }
 
         private List<SplitData> GenerateSampleData()

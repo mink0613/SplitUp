@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="12dp"
+        android:textColor="@android:color/black"
+        android:text="모임 이름" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="12dp"
+        android:editable="true"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="5dp"
+        android:focusableInTouchMode="true"
+        android:text="dddd" />
+    <fragment
+        class="SplitUp.fragment.SplitListFragment"
+        android:id="@+id/frag_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
