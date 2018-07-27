@@ -2549,6 +2549,9 @@ namespace SplitUp
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
 			
+			// aapt resource value: 0x7f08008b
+			public const int frag_content = 2131230859;
+			
 			// aapt resource value: 0x7f0800be
 			public const int friendList = 2131230910;
 			
@@ -2605,9 +2608,6 @@ namespace SplitUp
 			
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
-			
-			// aapt resource value: 0x7f08008b
-			public const int mainFragment = 2131230859;
 			
 			// aapt resource value: 0x7f0800c1
 			public const int masked = 2131230913;

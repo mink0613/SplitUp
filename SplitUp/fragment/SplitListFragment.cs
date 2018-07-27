@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace SplitUp.fragment
 {
-    class SplitListFragment : ListFragment
+    public class SplitListFragment : ListFragment
     {
         private SplitListAdapter adapter;
 

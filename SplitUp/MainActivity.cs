@@ -24,7 +24,7 @@ namespace SplitUp
             data = GenerateSampleData();
             MeetingData meeting = new MeetingData("Test", data.Count, 100, data);
 
-            SplitListFragment fragment = (SplitListFragment)FragmentManager.FindFragmentById(Resource.Layout.split_list_fragment);
+            SplitListFragment fragment = (SplitListFragment) FragmentManager.FindFragmentById(Resource.Id.frag_content);
             fragment.AddItem("Test", data.Count, 100, data);
 
             //listView = (ListView) FindViewById(Resource.Id.mainSplitResultListView);

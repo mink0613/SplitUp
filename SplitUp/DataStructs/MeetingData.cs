@@ -2,7 +2,7 @@
 
 namespace SplitUp.DataStructs
 {
-    class MeetingData
+    public class MeetingData
     {
         private string name;
         private int totalParticipate;

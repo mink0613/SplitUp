@@ -1,6 +1,6 @@
 ﻿namespace SplitUp.DataStructs
 {
-    class Participant
+    public class Participant
     {
         private string name;
 

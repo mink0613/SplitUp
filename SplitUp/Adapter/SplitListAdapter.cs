@@ -48,7 +48,7 @@ namespace SplitUp.Adapter
 
             //fill in your items
             //holder.Title.Text = "new text here";
-            TextView meeting = (TextView) view.FindViewById(Resource.Id.meetingName);
+            TextView meeting = (TextView) view.FindViewById(Resource.Id.meeting);
             TextView totalParticipate = (TextView)view.FindViewById(Resource.Id.totalParticipate);
             TextView totalAmount = (TextView)view.FindViewById(Resource.Id.amount);
 

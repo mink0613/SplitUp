@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SplitUp.DataStructs
 {
-    class SplitData
+    public class SplitData
     {
         private DateTime time;
 
