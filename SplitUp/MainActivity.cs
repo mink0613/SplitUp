@@ -1,6 +1,8 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
+using Android.Views;
+using Android.Widget;
 using SplitUp.DataStructs;
 using SplitUp.fragment;
 using System;
@@ -21,6 +23,10 @@ namespace SplitUp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
+            ImageButton settings = (ImageButton)FindViewById(Resource.Id.settings);
+            settings.SetImageResource(Resource.Drawable.setting);
+            settings.Click += Settings_Click;
+
             data = GenerateSampleData();
             MeetingData meeting = new MeetingData("Test", data.Count, 100, data);
 
@@ -28,9 +34,13 @@ namespace SplitUp
             fragment.AddItem("Test", data.Count, 100, data);
             fragment.AddItem("Test2", data.Count, 200, data);
             fragment.AddItem("Test3", data.Count, 300, data);
-
+            
             //listView = (ListView) FindViewById(Resource.Id.mainSplitResultListView);
 
+        }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
         }
 
         private List<SplitData> GenerateSampleData()

@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Views;
+using Android.Widget;
 using SplitUp.Adapter;
 using SplitUp.DataStructs;
 using System.Collections.Generic;
@@ -32,6 +33,19 @@ namespace SplitUp.fragment
         public void AddItem(string name, int totalParticipate, int totalAmount, List<SplitData> split)
         {
             adapter.AddItem(name, totalParticipate, totalAmount, split);
+        }
+
+        public override void OnListItemClick(ListView l, View v, int position, long id)
+        {
+            MeetingData data = adapter.GetSelectedItem(position);
+            if (data.GetName() == null)
+            {
+                // add new
+            }
+            else
+            {
+                // check current
+            }
         }
     }
 }

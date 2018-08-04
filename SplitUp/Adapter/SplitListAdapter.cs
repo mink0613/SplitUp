@@ -16,6 +16,8 @@ namespace SplitUp.Adapter
         {
             this.context = context;
             data = new List<MeetingData>();
+
+            data.Add(new MeetingData(null, -1, -1, null));
         }
 
         public override Java.Lang.Object GetItem(int position)
@@ -46,17 +48,40 @@ namespace SplitUp.Adapter
                 view.Tag = holder;
             }
 
+            view.Click += View_Click;
+
             //fill in your items
-            //holder.Title.Text = "new text here";
-            TextView meeting = (TextView) view.FindViewById(Resource.Id.meeting);
+            TextView meeting = (TextView)view.FindViewById(Resource.Id.meeting);
             TextView totalParticipate = (TextView)view.FindViewById(Resource.Id.totalParticipate);
             TextView totalAmount = (TextView)view.FindViewById(Resource.Id.amount);
+            TextView date = (TextView)view.FindViewById(Resource.Id.date);
+            ImageView plusView = (ImageView)view.FindViewById(Resource.Id.plus);
 
-            meeting.Text = data[position].GetName();
-            totalParticipate.Text = data[position].GetTotalParticipate().ToString();
-            totalAmount.Text = data[position].GetTotalAmount().ToString();
+            if (position < data.Count - 1)
+            {
+                meeting.Text = data[position].GetName();
+                totalParticipate.Text = data[position].GetTotalParticipate().ToString();
+                totalAmount.Text = data[position].GetTotalAmount().ToString();
+
+                plusView.Visibility = ViewStates.Gone;
+            }
+            else
+            {
+                meeting.Visibility = ViewStates.Gone;
+                totalParticipate.Visibility = ViewStates.Gone;
+                totalAmount.Visibility = ViewStates.Gone;
+                date.Visibility = ViewStates.Gone;
+
+                plusView.Visibility = ViewStates.Visible;
+                plusView.SetImageResource(Resource.Drawable.plus);
+            }
 
             return view;
+        }
+
+        private void View_Click(object sender, System.EventArgs e)
+        {
+            
         }
 
         //Fill in cound here, currently 0
@@ -71,7 +96,12 @@ namespace SplitUp.Adapter
         public void AddItem(string name, int totalParticipate, int totalAmount, List<SplitData> split)
         {
             MeetingData newData = new MeetingData(name, totalParticipate, totalAmount, split);
-            data.Add(newData);
+            data.Insert(0, newData);
+        }
+
+        public MeetingData GetSelectedItem(int index)
+        {
+            return data[index];
         }
     }
 
